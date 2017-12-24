@@ -1,19 +1,18 @@
-import React, { Component } from 'react';
-import './App.css';
+import Client from 'boardgame.io/client';
+import Game from 'boardgame.io/game';
 
-class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <header className="App-header">
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
-      </div>
-    );
+const TicTacToe = Game({
+  G: { cells: Array(9).fill(null) },
+
+  moves: {
+    clickCell(G, ctx, id) {
+      let cells = [...G.cells];
+      cells[id] = ctx.currentPlayer;
+      return {...G, cells};
+    }
   }
-}
+});
+
+const App = Client({ game: TicTacToe });
 
 export default App;
