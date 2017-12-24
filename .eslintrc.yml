@@ -1,0 +1,22 @@
+root: true
+rules:
+  indent: [off, 2]
+  quotes: [off, single]
+  linebreak-style: [error, unix]
+  semi: [error, always]
+  no-cond-assign: [off]
+  no-empty: [off]
+  no-extra-boolean-cast: [off]
+  no-loop-func: [off]
+  no-unused-vars: [error, {args: all, argsIgnorePattern: ^_}]
+  no-shadow: [error]
+  brace-style: [off, 1tbs, {allowSingleLine: true}]
+  no-spaced-func: [error]
+  space-before-blocks: [error]
+  space-before-function-paren: [error, never]
+  keyword-spacing: [error]
+  comma-dangle: [error]
+  eqeqeq: [error, smart]
+parserOptions:
+  sourceType: module
+extends: eslint:recommended
