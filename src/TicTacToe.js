@@ -16,12 +16,12 @@ function IsVictory(cells) {
     const symbol = cells[pos[0]];
     let winner = symbol;
     for (let i of pos) {
-      if (cells[i] != symbol) {
+      if (cells[i] !== symbol) {
         winner = null;
         break;
       }
     }
-    if (winner != null) return true;
+    if (winner !== null) return true;
   }
 
   return false;
