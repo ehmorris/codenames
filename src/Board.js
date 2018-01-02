@@ -19,7 +19,7 @@ class Board extends Component {
   render() {
     let cells = [];
 
-    for (let id = 0; id < 9; id++) {
+    for (let id = 0; id < this.props.G.cells.length; id++) {
       cells.push(
         <Cell
           key={id}
